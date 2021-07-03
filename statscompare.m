@@ -44,7 +44,7 @@
 
 %123456789012345678901234567890123456789012345678901234567890123456789012
 %
-%     FHR Morphological Analysis Toolbox  Copyright (C) 2018 Samuel Boudet, FacultÈ de MÈdecine et MaÔeutique,
+%     FHR Morphological Analysis Toolbox  Copyright (C) 2018 Samuel Boudet, FacultÔøΩ de MÈñêecine et MaÈ£Åutique,
 %     samuel.boudet@gmail.com
 %
 %     This file is part of FHR Morphological Analysis Toolbox 
@@ -89,7 +89,7 @@ function stats=statscompare(FHR,LDB1,LDB2,acc1,acc2,overshoots)
     stats.Index_Agreement=1-sum((L1-L2).^2)/sum((abs(L1-mean(L1))+abs(L2-mean(L2))).^2);
     
     %Decelerations :
-    [T,trueMatch,Qd]=accMatch(acc1{2},acc2{2},zeros(0,2));     
+    [T,trueMatch,Qd]=accMatch(acc1{2},acc2{2},zeros(0,2)); % overshoots 
     stats.Dec_Match=T(1,1);
     stats.Dec_Only_1=T(1,3)+T(1,4);
     stats.Dec_Only_2=T(3,1)+T(4,1);

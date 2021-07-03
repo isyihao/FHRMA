@@ -60,7 +60,7 @@
 
 %123456789012345678901234567890123456789012345678901234567890123456789012
 %
-%     FHR Morphological Analysis Toolbox  Copyright (C) 2018 Samuel Boudet, FacultÈ de MÈdecine et MaÔeutique,
+%     FHR Morphological Analysis Toolbox  Copyright (C) 2018 Samuel Boudet, FacultÔøΩ de MÈñêecine et MaÈ£Åutique,
 %     samuel.boudet@gmail.com
 %
 %     This file is part of "Fetal Heart Rate morphological analysis Toolbox"
@@ -90,6 +90,7 @@ function  fileresults=evaluateaam(command,expertbase,folder)
         else
             filename=expertbase(i).filename;
         end
+        disp(filename);
         [FHR1,FHR2,TOCO]=fhropen(filename);
         [FHR,FHRraw,TOCO]=preprocess(FHR1,FHR2,TOCO,expertbase(i).unreliableSignal);
         FHR0=FHRraw;FHR0(isnan(FHR0))=0;
